@@ -1165,7 +1165,7 @@ usage.append('KVM Hosts', "Names of KVM hosts: "+ "\n")
 for host in hosts: 
     usage.append('KVM Hosts', host+"\n")
     # Untar sosreport for hosts
-#    untar(os.path.join(path.log_collector_data,host), 'sosreport', 'tar.xz')
+    untar(os.path.join(path.log_collector_data,host), 'sosreport', 'tar.xz')
 
 txt_virtualmachines = "\
 ============================================================================================================================\n\
