@@ -1124,7 +1124,8 @@ def healthchecker(default_values,result_storage):
 dt_string = datetime.now().strftime("%m%d%Y-%H%M%S")
 try:
     
-    sosreport_path = os.path.realpath(raw_input("Enter the path of sosreport: "))
+    #sosreport_path = os.path.realpath(raw_input("Enter the path of sosreport: "))
+    sosreport_path = os.getcwd()
 #    if '.tar' in sosreport_path:
 #        while not os.path.isfile(sosreport_path):
 #            sosreport_path = os.path.realpath(raw_input("There is no such file, please try again.\nEnter the path of sosreport: "))
@@ -1132,7 +1133,8 @@ try:
 #        while not os.path.isdir(sosreport_path):
 #           sosreport_path = os.path.realpath(raw_input("There is no such file, please try again.\nEnter the path of sosreport: "))
     
-    output_dir = os.path.realpath(raw_input("Enter the directory of the output: "))
+    #output_dir = os.path.realpath(raw_input("Enter the directory of the output: "))
+    output_dir = os.getcwd()
 #   while not os.path.isdir(output_dir):
 #        output_dir = os.path.realpath(raw_input("There is no such directory, please try again.\nEnter the directory of the output: "))
         
@@ -1165,7 +1167,7 @@ usage.append('KVM Hosts', "Names of KVM hosts: "+ "\n")
 for host in hosts: 
     usage.append('KVM Hosts', host+"\n")
     # Untar sosreport for hosts
-    untar(os.path.join(path.log_collector_data,host), 'sosreport', 'tar.xz')
+#    untar(os.path.join(path.log_collector_data,host), 'sosreport', 'tar.xz')
 
 txt_virtualmachines = "\
 ============================================================================================================================\n\
